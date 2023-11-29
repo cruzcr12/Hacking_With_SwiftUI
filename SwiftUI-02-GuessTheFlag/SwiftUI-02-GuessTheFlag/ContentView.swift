@@ -62,6 +62,11 @@ struct ContentView: View {
     @State private var showingAlert = false
     @State private var showingResultAlert = false
     
+    @State private var animationAmount = 0.0
+    @State private var flagTappedIndex = 0
+    @State private var flagOpacity = 1.0
+    @State private var flagScaleAmount = 1.0
+    
     
     
     var body: some View {
@@ -89,9 +94,20 @@ struct ContentView: View {
                     ForEach(0..<3){number in
                         Button {
                             flagTapped(number)
+                            withAnimation(.interpolatingSpring(stiffness: 5, damping: 2)) {
+                                animationAmount += 360
+                                flagOpacity = 0.25
+                                flagScaleAmount = 0.5
+                            }
+                            
                         } label: {
                             FlagImage(country: countries[number])
                         }
+                        
+                        .rotation3DEffect(.degrees(flagTappedIndex == number ? animationAmount : 0),
+                                          axis: (x: 0, y: 1, z: 0))
+                        .opacity(flagTappedIndex != number ? flagOpacity : 1 )
+                        .scaleEffect(flagTappedIndex != number ? flagScaleAmount : 1)
                         
                     }
                 }
@@ -99,6 +115,7 @@ struct ContentView: View {
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                
                 
                 Spacer()
                 Spacer()
@@ -124,6 +141,7 @@ struct ContentView: View {
     }
     
     func flagTapped(_ number: Int){
+        flagTappedIndex = number
         if number == correctAnswer {
             scoreTitle = "Correct"
             userScore += 1
@@ -140,6 +158,8 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        flagOpacity = 1
+        flagScaleAmount = 1
     }
     
     func resetGame(){
