@@ -13,6 +13,7 @@ struct SwiftUI_07_MoonshotApp: App {
         WindowGroup {
             ContentView()
             //NavigationLinkExample()
+            //HierarchicalCodableData()
         }
     }
 }
