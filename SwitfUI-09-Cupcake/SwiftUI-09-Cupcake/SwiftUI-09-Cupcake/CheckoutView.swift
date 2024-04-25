@@ -11,7 +11,9 @@ struct CheckoutView: View {
     @ObservedObject var order: Order
     
     @State private var confirmationMessage = ""
+    @State private var checkoutErrorMessage = ""
     @State private var showingConfirmation = false
+    @State private var showingCheckoutError = false
     
     var body: some View {
         ScrollView {
@@ -43,6 +45,11 @@ struct CheckoutView: View {
         } message: {
             Text(confirmationMessage)
         }
+        .alert("An error has occurred!", isPresented: $showingCheckoutError){
+            Button("OK") {}
+        } message: {
+            Text(checkoutErrorMessage)
+        }
        
         
         
@@ -64,7 +71,7 @@ struct CheckoutView: View {
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField:
         "Content-Type")
-        //request.httpMethod = "POST"
+        request.httpMethod = "POST"
         
         // 3. Run the request and process the response
         do {
@@ -79,7 +86,9 @@ struct CheckoutView: View {
             showingConfirmation = true
             
         } catch {
+            checkoutErrorMessage = "There was a problem placing your order.\n Please, try again later."
             print("Checkout failed.")
+            showingCheckoutError = true
         }
     }
 }
