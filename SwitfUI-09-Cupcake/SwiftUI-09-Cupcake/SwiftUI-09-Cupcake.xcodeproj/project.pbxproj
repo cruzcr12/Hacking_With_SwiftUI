@@ -18,6 +18,7 @@
 		32ACA93D2B9BB08900F6C22B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ACA93C2B9BB08900F6C22B /* Order.swift */; };
 		32ACA93F2B9BC73600F6C22B /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ACA93E2B9BC73600F6C22B /* AddressView.swift */; };
 		32BF2CE52BA0C411002C5A92 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF2CE42BA0C411002C5A92 /* CheckoutView.swift */; };
+		9B0E02CB2BEA8C720046F3A3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0E02CA2BEA8C720046F3A3 /* OrderData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		32ACA93C2B9BB08900F6C22B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		32ACA93E2B9BC73600F6C22B /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		32BF2CE42BA0C411002C5A92 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		9B0E02CA2BEA8C720046F3A3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				3222E30C2B87DDF600456639 /* SwiftUI_09_CupcakeApp.swift */,
 				3222E30E2B87DDF600456639 /* ContentView.swift */,
+				9B0E02CA2BEA8C720046F3A3 /* OrderData.swift */,
 				32ACA93C2B9BB08900F6C22B /* Order.swift */,
 				32ACA93E2B9BC73600F6C22B /* AddressView.swift */,
 				32BF2CE42BA0C411002C5A92 /* CheckoutView.swift */,
@@ -164,6 +167,7 @@
 				3222E30D2B87DDF600456639 /* SwiftUI_09_CupcakeApp.swift in Sources */,
 				32191C212B88F8CE0090504D /* 02-UrlSessionExample.swift in Sources */,
 				32ACA93F2B9BC73600F6C22B /* AddressView.swift in Sources */,
+				9B0E02CB2BEA8C720046F3A3 /* OrderData.swift in Sources */,
 				329A5CA12B9771BC00804F83 /* 03-AsyncImageExample.swift in Sources */,
 				32ACA93D2B9BB08900F6C22B /* Order.swift in Sources */,
 				32BF2CE52BA0C411002C5A92 /* CheckoutView.swift in Sources */,

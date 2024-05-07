@@ -1,29 +1,46 @@
 //
-//  Order.swift
+//  OrderData.swift
 //  SwiftUI-09-Cupcake
 //
-//  Created by cradmin on 8/3/24.
+//  Created by Esteban Cruz on 7/5/24.
 //
 
-import SwiftUI
+import Foundation
 
-/**
- The original implementation of the Order class before the challenge
- **/
-
-class Order: ObservableObject, Codable {
-    // Add a CodingKeys enum to declare the properties we want to encode and decode
+class OrderData: ObservableObject, Codable {
     enum CodingKeys: CodingKey {
-        case type, quantity, extraFrosting, addSprinkles, name, streetAddress, city, zip
+        case order
     }
     
+    @Published var order: OrderInfo
+    
+    //init() {  }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        order = try container.decode(OrderInfo.self, forKey: .order)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(order, forKey: .order)
+    }
+
+}
+
+struct OrderInfo: Codable {
+    // Add a CodingKeys enum to declare the properties we want to encode and decode
+    /*enum CodingKeys: CodingKey {
+        case type, quantity, extraFrosting, addSprinkles, name, streetAddress, city, zip
+    }
+    */
     
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
 
-    @Published var type = 0
-    @Published var quantity = 3
+    var type = 0
+    var quantity = 3
     
-    @Published var specialRequestEnabled = false {
+    var specialRequestEnabled = false {
         didSet {
             if specialRequestEnabled == false {
                 extraFrosting = false
@@ -31,14 +48,14 @@ class Order: ObservableObject, Codable {
             }
         }
     }
-    @Published var extraFrosting = false
-    @Published var addSprinkles = false
+    var extraFrosting = false
+    var addSprinkles = false
     
     // Address properties
-    @Published var name = ""
-    @Published var streetAddress = ""
-    @Published var city = ""
-    @Published var zip = ""
+    var name = ""
+    var streetAddress = ""
+    var city = ""
+    var zip = ""
     
     // Validation property for Address
     var hasValidAddress: Bool {
@@ -72,7 +89,7 @@ class Order: ObservableObject, Codable {
         return cost
     }
     
-    init() { }
+    /* init() { }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -104,6 +121,5 @@ class Order: ObservableObject, Codable {
         zip = try container.decode(String.self, forKey: .zip)
         
     }
-    
+    */
 }
-
