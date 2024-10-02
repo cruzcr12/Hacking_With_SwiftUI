@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1391982CAAFF2F00CC5DED /* 04-ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1391972CAAFF2F00CC5DED /* 04-ImageSaver.swift */; };
+		9B8B20AC2CA5BB7F00F3363B /* 03-CoreImageExe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B20AB2CA5BB7F00F3363B /* 03-CoreImageExe.swift */; };
+		9B8B20AE2CA5F38A00F3363B /* 04-ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B20AD2CA5F38A00F3363B /* 04-ImagePicker.swift */; };
+		9B8B20B02CA5FBCE00F3363B /* 04-UIViewControllerExe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B20AF2CA5FBCE00F3363B /* 04-UIViewControllerExe.swift */; };
 		BC5194E22C977C8000E2D546 /* SwiftUI_12_InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5194E12C977C8000E2D546 /* SwiftUI_12_InstafilterApp.swift */; };
 		BC5194E42C977C8000E2D546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5194E32C977C8000E2D546 /* ContentView.swift */; };
 		BC5194E62C977C8100E2D546 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5194E52C977C8100E2D546 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B1391972CAAFF2F00CC5DED /* 04-ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-ImageSaver.swift"; sourceTree = "<group>"; };
+		9B8B20AB2CA5BB7F00F3363B /* 03-CoreImageExe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-CoreImageExe.swift"; sourceTree = "<group>"; };
+		9B8B20AD2CA5F38A00F3363B /* 04-ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-ImagePicker.swift"; sourceTree = "<group>"; };
+		9B8B20AF2CA5FBCE00F3363B /* 04-UIViewControllerExe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-UIViewControllerExe.swift"; sourceTree = "<group>"; };
 		BC5194DE2C977C8000E2D546 /* SwiftUI-12-Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-12-Instafilter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5194E12C977C8000E2D546 /* SwiftUI_12_InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_12_InstafilterApp.swift; sourceTree = "<group>"; };
 		BC5194E32C977C8000E2D546 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +49,10 @@
 			children = (
 				BC5194EF2C977CB700E2D546 /* 01-PropWrapperExe.swift */,
 				BCB460512CA3BAAF00F892BF /* 02-MultipleOptsExe.swift */,
+				9B8B20AB2CA5BB7F00F3363B /* 03-CoreImageExe.swift */,
+				9B8B20AD2CA5F38A00F3363B /* 04-ImagePicker.swift */,
+				9B8B20AF2CA5FBCE00F3363B /* 04-UIViewControllerExe.swift */,
+				9B1391972CAAFF2F00CC5DED /* 04-ImageSaver.swift */,
 				BC5194E02C977C8000E2D546 /* SwiftUI-12-Instafilter */,
 				BC5194DF2C977C8000E2D546 /* Products */,
 			);
@@ -143,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8B20B02CA5FBCE00F3363B /* 04-UIViewControllerExe.swift in Sources */,
 				BC5194E42C977C8000E2D546 /* ContentView.swift in Sources */,
 				BC5194F02C977CB700E2D546 /* 01-PropWrapperExe.swift in Sources */,
+				9B1391982CAAFF2F00CC5DED /* 04-ImageSaver.swift in Sources */,
+				9B8B20AC2CA5BB7F00F3363B /* 03-CoreImageExe.swift in Sources */,
+				9B8B20AE2CA5F38A00F3363B /* 04-ImagePicker.swift in Sources */,
 				BCB460522CA3BAAF00F892BF /* 02-MultipleOptsExe.swift in Sources */,
 				BC5194E22C977C8000E2D546 /* SwiftUI_12_InstafilterApp.swift in Sources */,
 			);
@@ -282,11 +298,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-12-Instafilter/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your filtered photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,11 +328,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-12-Instafilter/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your filtered photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
