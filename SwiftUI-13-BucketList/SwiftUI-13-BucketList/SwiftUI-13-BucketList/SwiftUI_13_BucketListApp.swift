@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftUI_13_BucketListApp: App {
     var body: some Scene {
         WindowGroup {
-            _2_WriteData()
+            //_2_WriteData()
+            //_4_MapKitExample()
+            _5_TouchIdExample()
             //ContentView()
         }
     }
