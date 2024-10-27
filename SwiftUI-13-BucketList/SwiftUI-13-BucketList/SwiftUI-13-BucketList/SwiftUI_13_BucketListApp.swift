@@ -13,8 +13,9 @@ struct SwiftUI_13_BucketListApp: App {
         WindowGroup {
             //_2_WriteData()
             //_4_MapKitExample()
-            _5_TouchIdExample()
-            //ContentView()
+            //_5_TouchIdExample()
+            //_7_ImproveAnnotations()
+            ContentView()
         }
     }
 }
